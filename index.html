@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="container">
+        <section class="text-center mt-5 ">
+            <a class="navbar-brand text-warning fw-bold fs-1" href="#">Library</a>
+            <p class=" fw-bold fs-5">Search your favourite Books....</p>
+        </section>
+
+    </header>
+    
+    <!-- input field -->
+    <section class="container">
+        <div class="m-5">
+            <div class="d-flex m-auto w-75">
+                <input class="form-control  btn-outline-warning me-2" type="search" placeholder="Search a book" aria-label="Search"
+                    id="input-value" />
+                <button onclick="loadData()" class="btn btn-outline-warning" type="submit" id="submit-btn">
+                    Search
+                </button>
+            </div>
+            <!-- spinner -->
+            <div class="d-flex justify-content-center mt-5 d-none" id="spinner">
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="sr-only"></span>
+                </div>
+            </div>
+            <!-- error message div -->
+            <div id="error-message"></div>
+            <!-- founded books div -->
+            <div class="text-center mt-3 bg-warning p-1 text-white ">
+                <h4><span id="founded-books">0</span> Books Found...</h4>
+            </div>
+            <!-- all Books div -->
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3" id="book-items"></div>
+
+            <!-- app js -->
+            <script src="app.js"></script>
+            <!-- bootstrap js -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
